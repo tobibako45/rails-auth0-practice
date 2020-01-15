@@ -56,6 +56,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Auth0
 gem 'omniauth-auth0', '~> 2.2'
 gem 'omniauth-rails_csrf_protection', '~> 0.1'
-
-# env
-gem 'dotenv-rails'
