@@ -11,5 +11,10 @@
 
   <body>
     <%= yield %>
+    <% if flash[:notice] %>
+    <div class="notice" style="text-align: center; color: #EB5424; margin-top: 40px; font-size: 1.8rem;">
+      <%= flash[:notice]%>
+    </div>
+  <% end %>
   </body>
 </html>

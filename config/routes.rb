@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'dashboard/show'
-  get '/' => 'home#show'
-  get '/dashboard' => 'dashboard#show'
-  get '/auth/auth0/callback' => 'auth0#callback'
-  get '/auth/failure' => 'auth0#failure'
-  get '/logout' => 'logout#logout'
+  #get 'dashboard/show'
+  #get '/auth/auth0/callback', to: 'auth0#callback'
+  #get '/logout', to: 'logout#logout'
+  #get '/dashboard', to: 'dashboard#show'
+  get '/auth/:provider/callback', to: 'sessions#create'
+  get '/logout', to: 'sessions#destroy'
   root 'home#show'
 end
