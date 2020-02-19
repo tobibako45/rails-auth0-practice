@@ -1,4 +1,17 @@
-<img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg">
-<h1>RoR Auth0 Sample</h1>
-<p>Step 1 - Login.</p>
-<%= button_to 'Login', 'auth/auth0', method: :post %>
+<div style="text-align: center;">
+
+  <img src="https://cdn.auth0.com/styleguide/1.0.0/img/badge.svg">
+  <h1>RoR Auth0 Sample</h1>
+  <p>Step 1 - Login.</p>
+
+  <% if session[:userinfo] %>
+    <h2 style="color: #EB5424;">
+      こんにちわ <%= session[:userinfo]['info']['nickname'] %> さん
+    </h2>
+    <%= button_to 'ログアウト', 'logout', method: :get %>
+  <% else %>
+    <%= button_to 'ログイン', 'auth/auth0', method: :post %>
+  <% end %>
+
+</div>
+
